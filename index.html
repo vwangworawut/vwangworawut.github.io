@@ -47,11 +47,32 @@
             dd h2 span{font-size: 15px}
             dd ul li {font-size: 15px}
         }
+    @media only screen 
+        and (device-width : 736px) 
+        and (device-height : 414px)
+        and (orientation : landscape) 
+        and (-webkit-device-pixel-ratio : 3) {
+            body {width:75%;margin-left: 1%}
+            #pic {width: 25%; height: 25%;}
+            #page-wrap{width: 130%;}
+            h1 {font-size: 30px}
+            #contact-info p {font-size: 15px}
+            #objective {width: 75%}
+            #objective p {font-size: 15px}
+            dd {width: 75%;}
+            dt {font-size: 15px;}
+            dd h3 {font-size: 15px}
+            dd p {font-size: 15px}
+            dd h2 {font-size: 15px}
+            dd h2 span{font-size: 15px}
+            dd ul li {font-size: 15px}
+        }
         
     /* iphone 7, 8 */
         @media only screen 
         and (min-device-width: 375px) 
-        and (max-device-height: 667px) 
+        and (max-device-height: 667px)
+        and (orientation : portrait)
         and (-webkit-device-pixel-ratio: 2) {
             body {width:75%;margin-left: 1%}
             #pic {width: 25%; height: 25%;}
@@ -68,6 +89,29 @@
             dd h2 span{font-size: 15px}
             dd ul li {font-size: 15px}
         }
+        
+        @media only screen 
+        and (min-device-width : 375px) 
+        and (max-device-width : 667px)
+        and (-webkit-device-pixel-ratio: 2)
+        and (orientation : landscape) { 
+            body {width:75%;margin-left: 1%}
+            #pic {width: 25%; height: 25%;}
+            #page-wrap{width: 130%;}
+            h1 {font-size: 30px}
+            #contact-info p {font-size: 15px}
+            #objective {width: 75%; float: none}
+            #objective p {font-size: 15px}
+            dd {width: 75%;}
+            dt {font-size: 15px;}
+            dd h3 {font-size: 15px}
+            dd p {font-size: 15px}
+            dd h2 {font-size: 15px}
+            dd h2 span{font-size: 15px}
+            dd ul li {font-size: 15px}
+        }
+        
+        /* Ipad */
         @media only screen 
         and (min-device-width : 768px) 
         and (max-device-width : 1024px)  {
