@@ -117,6 +117,7 @@
       			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="event-col-container">
                         <div class="column-top-icons">
+                            <i class="fa fa-minus" onclick="myFunction()" style="float:left;padding:10px 0 0 10px;"></i>
                             <i class="fa fa-plus-circle fa-2x" style="float:right;padding:3px 3px 0 0"></i>
                         </div>
                         <div class="event-container active" href="">
@@ -138,7 +139,7 @@
                 <div class="event-description-col-container">
                     <div class="event-description-edit">
                         <div class="column-top-icons">
-                           <i class="fa fa-edit fa-2x" style="float:right;padding:5px 5px 0 0"></i>
+                            <i class="fa fa-edit fa-2x" style="float:right;padding:5px 5px 0 0"></i>
                         </div>
                         <div class="event-description">
                             <h2 class="pad-left-text">Pick up games</h2>
@@ -218,6 +219,18 @@
       $(function(){
           $('select.styled').customSelect();
       });
+      
+      function myFunction() {
+          var event_containers = document.getElementsByClassName("event-container");
+          for (var i = 0; i < event_containers.length; i++) {
+              if (event_containers[i].style.display == "none") {
+                  event_containers[i].style.display = "";
+              }
+              else {
+                  event_containers[i].style.display = "none";                 
+              }
+          }
+      }
 
   </script>
 
