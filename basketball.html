@@ -180,16 +180,13 @@
                 
             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12"> <!-- description column -->
                 <div class="event-description-col-container">
-                    <div class="event-description-edit">
-                        <div class="column-top-icons">
+                        <div class="event-description-container">
                             <i class="fa fa-edit fa-2x" style="float:right;padding:5px 5px 0 0"></i>
-                        </div>
-                        <div class="event-description">
-                            <h2 class="pad-left-text" id="event-title">Pick up games</h2>
-                            <h4 class="pad-left-text" id="event-date">July 8th</h4>
+                            <span class="pad-left-text event-title">Pick up games</span>
+                            <span class="pad-left-text event-date">July 8th</span>
                             <i class="fa fa-map-marker fa-lg pad-left-text" ></i>
                             <span class="pad-left-text event-location">Koret</span>
-                            <p class="pad-left-text" style="margin-top:10px">Hosted by: Vincent Wangworawut</p>
+                            <p class="pad-left-text event-host">Hosted by: Vincent Wangworawut</p>
                             
                             <div class="attendance-status-container">
                                 <div class="status-options">
@@ -204,11 +201,10 @@
                             </div>
                             
                             <div class="event-details">
-                                <p class="pad-left-text" id="event-description">Hey everyone, we're going to have pick up basketball at USF's Koret gym. Bring your shoes and a ball. Let's try to get a full team of 5.</p>
+                                <span class="pad-all-text event-description">Hey everyone, we're going to have pick up basketball at USF's Koret gym. Bring your shoes and a ball. Let's try to get a full team of 5.</span>
                             </div>
                         </div>
                     </div>
-                </div>
             </div> <!-- description column -->
             
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"> <!-- comments column -->
@@ -218,7 +214,7 @@
                             <img src="assets/img/profpic.jpg" class="img-circle" width="30">
                         </div>
                         <div class="comment-text">
-                            <span class="pad-left-text">Hope you can make it!</span>
+                            <span>Hope you can make it!</span>
                         </div>
                     </div>
                     <div class="comment">
@@ -226,7 +222,7 @@
                             <img src="assets/img/ui-zac.jpg" class="img-circle" width="30">
                         </div>
                         <div class="comment-text">
-                            <span class="pad-left-text">Going to be a bit late</span>
+                            <span>Going to be a bit late</span>
                         </div>
                     </div>             
                 </div>
@@ -259,27 +255,38 @@
   <script>
       //custom select box
 
-    $(function(){
-      $('select.styled').customSelect();
-    });
-      
-    $(function() {
-      $('#datetimepicker1').datetimepicker({
-        language: 'pt-BR'
-      });
-    });
+        $(function(){
+          $('select.styled').customSelect();
+        });
 
-    function minimize_events() {
-      var event_containers = document.getElementsByClassName("event-container");
-      for (var i = 0; i < event_containers.length; i++) {
-          if (event_containers[i].style.display == "none") {
-              event_containers[i].style.display = "";
+        $(function() {
+          $('#datetimepicker1').datetimepicker({
+            language: 'pt-BR'
+          });
+        });
+
+        function minimize_events() {
+          var event_containers = document.getElementsByClassName("event-container");
+          for (var i = 0; i < event_containers.length; i++) {
+              if (event_containers[i].style.display == "none") {
+                  event_containers[i].style.display = "";
+              }
+              else {
+                  event_containers[i].style.display = "none";                 
+              }
           }
-          else {
-              event_containers[i].style.display = "none";                 
-          }
-      }
-    }
+        }
+      
+        window.onload = function() {
+            var comments = document.getElementsByClassName("comment-text");
+
+            for (var i = 0; i < comments.length; i++) {
+                if (comments[i].getElementsByTagName("span")[0].innerHTML.length <= 52) {
+                    comments[i].style.lineHeight = "40px"
+                }
+
+            }
+        }
 
   </script>
 
