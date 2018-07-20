@@ -1,0 +1,123 @@
+<section class="wrapper">
+    <div class="row mt">
+        <!--settings column -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <i class="fa fa-ellipsis-h fa-lg" style="float:right"></i>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Create New Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top:-20px">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="event-title" class="col-form-label">Event title:</label>
+                        <input type="text" class="form-control" id="event-title">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-group" class="col-form-label">Group:</label>
+                        <select class="form-control">
+                            <option>Basketball</option>
+                            <option>Apartment</option>
+                            <option>School</option>
+                            <option>Work</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-date-time" class="col-form-label">Date and time:</label>
+                        <input class="form-control" type="datetime-local" id="event-date-time">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-description" class="col-form-label">Description:</label>
+                        <textarea class="form-control" id="event-description"></textarea>
+                    </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Create</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--event column -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="event-col-container">
+                <div class="column-top-icons">
+                    <i class="fa fa-minus pointer" onclick="minimize_events()" style="float:left;padding:10px 0 0 10px;"></i>
+                    <i class="fa fa-plus-circle fa-2x pointer" style="float:right;padding:3px 3px 0 0" data-toggle="modal" data-target="#exampleModal"></i>
+                </div>
+                <div class="event-container active" href="">
+                    <i class="fa fa-check" style="float:right;padding:5px 5px 0 0"></i>
+                    <span class="event-con-title pad-left-text">Pick up games</span>
+                    <br>
+                    <span class="event-con-date pad-left-text">5:00pm July 8th</span>
+                </div>
+                <div class="event-container" href="">
+                    <i class="fa fa-check" style="float:right;padding:5px 5px 0 0"></i>
+                    <span class="event-con-title pad-left-text">Watch Lakers game</span>
+                    <br>
+                    <span class="event-con-date pad-left-text">6:30pm July 25th</span>
+                </div>
+            </div>
+        </div><!--event column -->
+
+    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12"> <!-- description column -->
+        <div class="event-description-col-container">
+                <div class="event-description-container">
+                    <i class="fa fa-edit fa-2x" style="float:right;padding:5px 5px 0 0"></i>
+                    <span class="pad-left-text event-title">Pick up games</span>
+                    <span class="pad-left-text event-date">July 8th</span>
+                    <i class="fa fa-map-marker fa-lg pad-left-text" ></i>
+                    <span class="pad-left-text event-location">Koret</span>
+                    <p class="pad-left-text event-host">Hosted by: Vincent Wangworawut</p>
+
+                    <div class="attendance-status-container">
+                        <div class="status-options">
+                            <a class="pad-left-text" href="">3 Going | 2 Maybe | 5 Invited</a>
+                            <a href="" style="float:right; padding-right:10px">See All</a>
+                        </div>
+                        <div class="attendees-photos">
+                            <img src="assets/img/profpic.jpg" class="img-circle" width="50">
+                            <img src="assets/img/ui-zac.jpg" class="img-circle" width="50">
+                            <img src="assets/img/ui-sam.jpg" class="img-circle" width="50">
+                        </div>
+                    </div>
+
+                    <div class="event-details">
+                        <span class="pad-all-text event-description">Hey everyone, we're going to have pick up basketball at USF's Koret gym. Bring your shoes and a ball. Let's try to get a full team of 5.</span>
+                    </div>
+                </div>
+            </div>
+    </div> <!-- description column -->
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"> <!-- comments column -->
+        <div class="event-comments-col">
+            <div class="comment">
+                <div class="commenter-ava">
+                    <img src="assets/img/profpic.jpg" class="img-circle" width="30">
+                </div>
+                <div class="comment-text">
+                    <span>Hope you can make it!</span>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="commenter-ava">
+                    <img src="assets/img/ui-zac.jpg" class="img-circle" width="30">
+                </div>
+                <div class="comment-text">
+                    <span>Going to be a bit late</span>
+                </div>
+            </div>             
+        </div>
+
+    </div>
+    </div><!--/ row -->
+  </section> <!--/wrapper -->
